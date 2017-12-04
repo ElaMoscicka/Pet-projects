@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: #006666;
+}
+
+h1 {
+  font-family: Verdana;
+  font-size: 48px;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 3px 3px 3px black;
+}
+
+h3 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+button {
+  font-family: Verdana;
+  background: #003333;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 8px 20px;
+}
+
+#numbers,
+#result{
+  color: #003333;
+  font-size: 20px;
+}
