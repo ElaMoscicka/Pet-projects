@@ -30,11 +30,11 @@ function processInput(input) {
 function bubbleSort(numbers) {
   do {
     var swapped = false;
-    for (var i = 0; i < numbers.length; i++) {
-      if (numbers[i] > numbers[i + 1]) {
-        var temp = numbers[i];
-        numbers[i] = numbers[i + 1];
-        numbers[i + 1] = temp;
+    for (var i = 1; i < numbers.length; i++) {
+      if (numbers[i-1] > numbers[i]) {
+        var temp = numbers[i-1];
+        numbers[i-1] = numbers[i];
+        numbers[i] = temp;
         swapped = true;
       }
     }
