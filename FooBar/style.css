@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #3c3c5d;
+}
+
+/*-- Foobar Program */
+.container{
+  width: 75%;
+  min-width: 640px;
+  background: #1e1e2f;
+  margin: auto;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+ form {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px 3px black;
+}
+
+h3 {
+  text-align: center;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* User input*/
+#input-number{
+   margin-right: 20px;
+  height: 76px;
+  font-size: 2rem;
+  width: 150px;
+  text-align: center;
+  background: #111;
+  border: 2px solid orange;
+  border-radius: 10px;
+  color: orange;
+}
+
+button {
+  background: #000;
+  border: 2px solid #78b;
+  border-radius: 10px;
+  color: #bcf;
+  font-size: 2rem;
+  padding: 17px 80px;
+  margin: auto;
+}
+
+#input-number:focus{
+   box-shadow: 0 0 5px #9f9;
+  background: #000;
+}
+
+#input-number:focus,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button:hover {
+  box-shadow: 0 0 5px #99f;
+  background: #111;
+}
+button:active {
+  box-shadow: inset 0px 0px 5px #99f;
+}
+
+/* Foobar Result*/
+#result {
+  width: 65%;
+  min-height: 200px;
+  max-height: 2000px;
+  background: #0a0a10;
+  margin: auto;
+  padding: 1%;
+  text-align: center;
+  color: #ffffff;
+  overflow: auto;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+/* Styling output: Foobar, Foo, Bar, i*/
+p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 10px;
+  display: inline-block;
+  width: 110px;*/
+}
+
+.fbr {
+  color: #FFA500;
+}
+
+.foo {
+  color: #00BFFF;
+}
+
+.bar {
+  color: #800080;
+}
