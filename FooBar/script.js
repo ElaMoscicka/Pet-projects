@@ -16,7 +16,7 @@ if (isNaN(inputNumber) || inputNumber < 1 || inputNumber > 100 ) {
 }
 
   // Foobar function, writes results into div result // 
-for(var i=1; i<=inputNumber; i++){
+for(var i=1; i<=inputNumber; i++) {
   if ( i%3 === 0 && i%5 === 0 )
   {
     result.innerHTML += "<p class='fbr'>Foobar!</p>";
