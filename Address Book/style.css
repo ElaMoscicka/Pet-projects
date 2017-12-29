@@ -1,0 +1,135 @@
+body {
+    margin:0px;
+}
+
+.container {
+    position:relative;
+    width:960px;
+    margin:auto;
+}
+
+.title {
+    padding:10px;
+    border-bottom:2px solid;
+    background:rgb(250,250,250);
+}
+
+.title h1 {
+    margin:0px;
+    font-family:sans-serif;
+    font-weight:normal;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.quickadd {
+    padding:10px;
+    border-bottom:1px solid;
+}
+
+#QuickAdd {
+    padding:8px;
+    background:rgb(250,250,250);
+    border:1px dashed;
+    text-shadow:0px 0px 1px;
+}
+
+.quickaddForm {
+    height:440px;
+    padding:10px;
+    background:rgb(240,240,240);
+    overflow:hidden;
+    display:none;
+}
+
+.quickaddForm label {
+    position:relative;
+    display:block;
+    width:300px;
+    height:10px;
+    float:left;
+    font-family:sans-serif;
+    font-size:12px;
+    padding:10px;
+    font-weight:bold;
+}
+
+.quickaddForm input,textarea {
+    border:1px dashed;
+    width:50%;
+    padding:10px;
+    font-weight:bold;
+    border-radius:5px;
+    box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+#Add,#Cancel {
+    padding:10px;
+    margin:20px;
+    position:relative;
+    left:300px;
+    border:1px dashed;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.entry {
+    background:rgb(230,230,230);
+    width:960px;
+    height:40px;
+    border-bottom:1px solid;
+}
+
+
+.entry .name {
+    width:130px;
+    float:left;
+    padding:11px;
+}
+
+.entry .email {
+    width:200px;
+    float:left;
+    padding:11px;
+}
+
+
+.entry .phone {
+    width:100px;
+    float:left;
+    padding:11px;
+}
+
+.entry .address {
+    width:250px;
+    float:left;
+    padding:11px;
+}
+
+.entry .city {
+    width:100px;
+    float:left;
+    padding:11px;
+}
+
+.entry .del {
+    width:30px;
+    float:left;
+    padding:9px;
+}
+
+.entry p {
+    margin:0px;
+    font-family:sans-serif;
+    font-size:12px;
+    text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+}
+
+.entry .del a {
+    font-family:sans-serif;
+    color:#FFF;
+    font-size:12px;
+    padding:5px;
+    background:rgb(255,100,100);
+    border-radius:8px;
+    text-decoration:none;
+}
