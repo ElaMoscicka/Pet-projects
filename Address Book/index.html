@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <titleAddress Book></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1> Address Book</h1>
+            </div>
+            <div class="quickadd"><button id="QuickAdd">+ Add</button></div> <!--when we click on the QuickAdd it should display the quickaddForm panel-->
+            <div class="quickaddForm">
+                <label for="fullname">Name</label><input type="text" id="fullname" class="formFields">
+                <label for="phone">Phone</label><input type="text" id="phone" class="formFields">
+                <label for="email">E-mail</label><input type="text" id="email" class="formFields">
+                <label for="address">Address</label><textarea name="address" id="address" cols="30" rows="10" class="formFields"></textarea>
+                <label for="city">City</label><input type="text" id="city" class="formFields">
+                <br><br>
+                <button id="Add">Add Now</button><button id="Cancel">Cancel</button> <!-- when we click the button Add it should update the Address Book-->
+            </div>
+        <div class="addbook">
+            <div class="entry">
+                <div class="name"><p>Ela Moscicka</p></div>
+                <div class="phone"><p>00594828384</p></div>
+                <div class="email"><p>a-elmosc@microsoft.com</p></div>
+                <div class="address"><p>krakowskie przedmiescie</p></div>
+                <div class="city"><p>Warsaw</p></div>
+                <div class="del"><a href="#">Delete</a></div>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
