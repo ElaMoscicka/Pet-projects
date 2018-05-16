@@ -2,85 +2,124 @@
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
 
-.monthApril{
+h1{
+    font-family: Helvetica;
+    font-size: 35px;
+    text-align: center;
+    background: red;
+    /*Rainbow gradient on text in CSS*/
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Dropdown Menu*/
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgb(71, 207, 75);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-40%, -30%);
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+/* Calendar*/
+.year{
+    font-size:18px;
+}
+
+.monthApril, .monthMay, .monthJune, .monthJuly, .monthAugust, .monthSeptember, .monthOctober, .monthNovember, .monthDecember {
     padding: 70px 25px;
     width: 100%;
-    background: #3399ff;
     text-align: center;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+
+.monthApril, .monthMay, .monthJune, .monthJuly, .monthAugust, .monthSeptember, .monthOctober, .monthNovember, .monthDecember, 
+.weekdays,
+.days {
+    box-shadow: 5px 8px #c0b7b7;
+}
+
+.monthApril{
+    background: #3399ff;
 }
 
 .monthMay {
-    padding: 70px 25px;
-    width: 100%;
     background: #1abc9c;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthJune {
-    padding: 70px 25px;
-    width: 100%;
     background:  #cc99ff;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthJuly {
-    padding: 70px 25px;
-    width: 100%;
     background: #ff6666;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthAugust {
-    padding: 70px 25px;
-    width: 100%;
     background: #ff8c1a;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthSeptember {
-    padding: 70px 25px;
-    width: 100%;
     background: #ffcc00;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthOctober {
-    padding: 70px 25px;
-    width: 100%;
     background: #ff4d88;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthNovember {
-    padding: 70px 25px;
-    width: 100%;
     background: #4d4dff;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .monthDecember {
-    padding: 70px 25px;
-    width: 100%;
     background:  #33cc33;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
 }
 
 .month ul {
@@ -132,6 +171,11 @@ body {font-family: Verdana, sans-serif;}
     color: white !important;
     border-radius: 25px;
 }
+
+.days li .active:hover {
+    font-weight: bold;
+}
+
 
 /* Add media queries for smaller screens */
 @media screen and (max-width:720px) {
