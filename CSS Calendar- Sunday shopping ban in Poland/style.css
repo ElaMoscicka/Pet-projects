@@ -16,58 +16,43 @@ h1{
     -webkit-text-fill-color: transparent;
 }
 
-/* Dropdown Menu*/
-/* Dropdown Button */
-.dropbtn {
-    background-color: rgb(71, 207, 75);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+
+/*Styling the input element and the list*/
+#searchMonth {
+    background-image: url('images/magnifyingGlass.png'); /*from <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Magnifying glass">Magnifying glass</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
+    background-size: 17px;
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid rgb(35, 83, 180); 
+    border-radius: 5px; 
+    margin-bottom: 12px; 
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-40%, -30%);
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /*clears the list once the page is reloaded, so the months are not showed*/
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+#myUL li a {
+    border: 1px solid #ddd; 
+    margin-top: -1px; 
+    background-color: #f6f6f6; 
+    padding: 12px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: black; 
+    display: block; 
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+#myUL li a:hover:not(.header) {
+    background-color: #eee; 
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: #ddd
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-
 
 /* Calendar*/
 .year{
@@ -75,7 +60,7 @@ h1{
 }
 
 .monthApril, .monthMay, .monthJune, .monthJuly, .monthAugust, .monthSeptember, .monthOctober, .monthNovember, .monthDecember {
-    padding: 70px 25px;
+    padding: 30px 25px; /*changed from 70px 25px*/
     width: 100%;
     text-align: center;
     border-top-left-radius: 25px;
