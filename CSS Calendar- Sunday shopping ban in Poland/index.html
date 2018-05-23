@@ -9,20 +9,19 @@
 
   <h1>Calendar - Sunday shopping ban in Poland</h1>
 
-  <div class="dropdown">
-    <button class="dropbtn">Select month</button>
-    <div class="dropdown-content">
-      <a href="#monthApril">April</a>
-      <a href="#monthMay">May</a>
-      <a href="#monthJune">June</a>
-      <a href="#monthJuly">July</a>
-      <a href="#monthAugust">August</a>
-      <a href="#monthSeptember">September</a>
-      <a href="#monthOctober">October</a>
-      <a href="#monthNovember">November</a>
-      <a href="#monthDecember">December</a>
-    </div>
-  </div>
+  <input type="text" id="searchMonth" onkeyup="searchMonth()" placeholder="Search for month...">
+  
+  <ul id="myUL">
+    <li><a href="#monthApril">April</a></li>
+    <li><a href="#monthMay">May</a></li>
+    <li><a href="#monthJune">June</a></li>
+    <li><a href="#monthJuly">July</a></li>
+    <li><a href="#monthAugust">August</a></li>
+    <li><a href="#monthSeptember">September</a></li>
+    <li><a href="#monthOctober">October</a></li>
+    <li><a href="#monthNovember">November</a></li>
+    <li><a href="#monthDecember">December</a></li>
+  </ul>
 
 <div class="monthApril" id="monthApril" href="#">
 <div class="month">  
@@ -546,6 +545,8 @@
   <li>30</li>
   <li>31</li>
 </ul>
+
+<script type="text/javascript" src="script.js"></script>   
 
 </body>
 </html>
