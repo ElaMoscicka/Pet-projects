@@ -1,179 +1,34 @@
-* {box-sizing: border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-h1{
-    font-family: Helvetica;
-    font-size: 35px;
-    text-align: center;
-    background: red;
-    /*Rainbow gradient on text in CSS*/
-    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
-    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
-    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.header {
+  font-size: 15px;
+  color: red;
 }
 
-
-/*Styling the input element and the list*/
-#searchMonth {
-    background-image: url('images/magnifyingGlass.png'); /*from <div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Magnifying glass">Magnifying glass</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>*/
-    background-size: 17px;
-    background-position: 10px 12px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%; 
-    font-size: 16px; 
-    padding: 12px 20px 12px 40px; 
-    border: 1px solid rgb(35, 83, 180); 
-    border-radius: 5px; 
-    margin-bottom: 12px; 
+.button-style {
+  background-color: #e7e7e7;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-#myUL {
-    /* Remove default list styling */
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: none; /*clears the list once the page is reloaded, so the months are not showed*/
+.calendar {
+  width: 100px;
+  height: 90px;
+  background-color: white;
+  border: 2px solid black;
+  border-collapse: collapse;
 }
 
-#myUL li a {
-    border: 1px solid #ddd; 
-    margin-top: -1px; 
-    background-color: #f6f6f6; 
-    padding: 12px; 
-    text-decoration: none; 
-    font-size: 18px; 
-    color: black; 
-    display: block; 
+th {
+  border: 2px solid black;
+  background-color: #29335c;
+  color: #f3a712;
 }
 
-#myUL li a:hover:not(.header) {
-    background-color: #eee; 
+/*td {
+    border: 2px solid black;
 }
-
-/* Calendar*/
-.year{
-    font-size:18px;
-}
-
-.monthApril, .monthMay, .monthJune, .monthJuly, .monthAugust, .monthSeptember, .monthOctober, .monthNovember, .monthDecember {
-    padding: 30px 25px; /*changed from 70px 25px*/
-    width: 100%;
-    text-align: center;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-
-.monthApril, .monthMay, .monthJune, .monthJuly, .monthAugust, .monthSeptember, .monthOctober, .monthNovember, .monthDecember, 
-.weekdays,
-.days {
-    box-shadow: 5px 8px #c0b7b7;
-}
-
-.monthApril{
-    background: #3399ff;
-}
-
-.monthMay {
-    background: #1abc9c;
-}
-
-.monthJune {
-    background:  #cc99ff;
-}
-
-.monthJuly {
-    background: #ff6666;
-}
-
-.monthAugust {
-    background: #ff8c1a;
-}
-
-.monthSeptember {
-    background: #ffcc00;
-}
-
-.monthOctober {
-    background: #ff4d88;
-}
-
-.monthNovember {
-    background: #4d4dff;
-}
-
-.monthDecember {
-    background:  #33cc33;
-}
-
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
-}
-
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: #777;
-}
-
-.days li .active {
-    padding: 5px;
-    background: #ff0000;
-    color: white !important;
-    border-radius: 25px;
-}
-
-.days li .active:hover {
-    font-weight: bold;
-}
-
-
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-    .weekdays li, .days li {width: 13.1%;}
-}
-
-@media screen and (max-width: 420px) {
-    .weekdays li, .days li {width: 12.5%;}
-    .days li .active {padding: 2px;}
-}
-
-@media screen and (max-width: 290px) {
-    .weekdays li, .days li {width: 12.2%;}
-}
+*/
