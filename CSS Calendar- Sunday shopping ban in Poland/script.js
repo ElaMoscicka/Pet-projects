@@ -1,40 +1,97 @@
-let input = document.getElementById('searchMonth');
-input.addEventListener('keyup', function searchMonth(event) { //declaring searchMonth function
-  
-    // Declaring variables
-    let filter, ul, li, a, i;
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
+let monthsNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+let daysNames = [
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+  "Sunday"
+];
 
-    //checking if input lenght is more than one - showing/hiding month we're searching for from the list
-    if (input.value.length === 0) {
-        ul.style.display = "none";
-        return;
-    } else {
-        ul.style.display = "block";
-    }
+function showCalendar() {
+  let calendar = document.createElement("table");
+  calendar.classList.add("calendar");
 
-    // Loop through all list items and hide those who don't match the search query - searching for month in a list
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
+  let content = document.getElementById("content");
+
+  let calendarHeader = createHeader();
+  calendar.appendChild(calendarHeader);
+
+  let days = createDays();
+  calendar.appendChild(days);
+
+  //let monthStartDay = monthStartDay();
+  //calendar.appendChild(monthStartDay);
+
+  content.appendChild(calendar);
+}
+
+function createHeader() {
+  let thead = document.createElement("tr");
+  daysNames.forEach(day => {
+    let cell = document.createElement("th");
+    cell.textContent = day;
+    thead.appendChild(cell);
+  });
+  return thead;
+}
+
+function createDays() {
+  let tbody = document.createElement("tbody");
+  for (let i = 0; i < 6; i++) {
+    let row = document.createElement("tr");
+
+    for (let j = 0; j < 7; j++) {
+      let cell = document.createElement("td");
+      cell.textContent = i * 7 + j + 1;
+      row.appendChild(cell);
     }
-  
-  //redirecting to month we're searching for after pressing 'Enter' button
-    if (event.keyCode === 13) {
-      // Loop through all visible "a" items and trigger a click event on the first one.
-      event.preventDefault();
-      for (i = 0; i < li.length; i++) {
-          a = li[i].getElementsByTagName("a")[0];
-          if (li[i].style.display === "") {
-              a.click();
-              break;
-          }
-      }
-    } 
-});
+    tbody.appendChild(row);
+  }
+  return tbody;
+}
+
+function monthStartDay(thisYear, thisMonth) {
+  let thisYear = date.getFullYear();
+  let thisMonth = date.getMonth();
+  let date = new Date(thisYear, thisMonth, 1);
+  let startDay = date.getDay();
+
+  if (startDay === 0) {
+    startDay = 7;
+  }
+  return startDay;
+}
+
+function previous() {
+  console.log("previous");
+}
+
+function next() {
+  console.log("next");
+}
+
+//*bind execution logic with buttons
+let buttonPrev = document.getElementById("previous");
+buttonPrev.addEventListener("click", previous);
+
+let buttonNext = document.getElementById("next");
+buttonNext.addEventListener("click", next);
+
+let showButton = document.getElementById("show");
+showButton.addEventListener("click", showCalendar);
