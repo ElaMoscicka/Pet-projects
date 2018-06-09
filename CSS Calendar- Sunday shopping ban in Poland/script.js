@@ -32,7 +32,7 @@ function showCalendar() {
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
-  let days = createDays();
+  let days = createDaysForMonth(monthsNames[7], daysNames[5]);
   calendar.appendChild(days);
 
   //let monthStartDay = monthStartDay();
@@ -51,18 +51,9 @@ function createHeader() {
   return thead;
 }
 
-function createDays() {
+function createDaysForMonth(month, startingDay) {
   let tbody = document.createElement("tbody");
-  for (let i = 0; i < 6; i++) {
-    let row = document.createElement("tr");
 
-    for (let j = 0; j < 7; j++) {
-      let cell = document.createElement("td");
-      cell.textContent = i * 7 + j + 1;
-      row.appendChild(cell);
-    }
-    tbody.appendChild(row);
-  }
   return tbody;
 }
 
