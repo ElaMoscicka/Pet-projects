@@ -32,10 +32,8 @@ function showCalendar() {
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
-  let days = createDaysForMonth(monthsNames[7], daysNames[6]); 
-
-  //let monthStartDay = monthStartDay();
-  //calendar.appendChild(monthStartDay);
+  let days = createDaysForMonth(monthsNames[0], daysNames[6]);
+  calendar.appendChild(days);
 
   content.appendChild(calendar);
 }
@@ -50,47 +48,81 @@ function createHeader() {
   return thead;
 }
 
-function createDaysForMonth(month, startingDay) {
+function createDaysForMonth(monthName, startingDay) {
   let tbody = document.createElement("tbody");
   let count = 1;
 
+  let firstRow = createFirstRow(startingDay);
+  tbody.appendChild(firstRow);
+  
+  let index = daysNames.indexOf(startingDay);
+  let nextMonday = 8 - index; // 7 - index + 1
+
+  let lastMonday = createMiddleRows(tbody, nextMonday, monthName);
+
+  let lastRow = createLastRow(lastMonday, monthName);
+  tbody.appendChild(lastRow);
+
+	return tbody;
+}
+
+function createFirstRow(startingDay) {
   let row = document.createElement("tr");
   let start = daysNames.indexOf(startingDay);
+  
   for (i = 0; i < start; i++) {
     let cell = document.createElement("td");
     row.appendChild(cell);
   }
-
+  
+  let count = 1;
   for (i = start; i < 7; i++) {
     let cell = document.createElement("td");
     cell.textContent = count;
     row.appendChild(cell);
     count++;
   }
-  tbody.appendChild(row);
-
-  let row2 = document.createElement("tr");
-  for (i = 0; i < 7; i++) {
-    let cell = document.createElement("td");
-    cell.textContent = count;
-    row2.appendChild(cell);
-    count++;
-  }
-  tbody.appendChild(row2);
-
-  return tbody;
+  
+  return row;
 }
 
-function monthStartDay(thisYear, thisMonth) {
-  let thisYear = date.getFullYear();
-  let thisMonth = date.getMonth();
-  let date = new Date(thisYear, thisMonth, 1);
-  let startDay = date.getDay();
-
-  if (startDay === 0) {
-    startDay = 7;
+function createMiddleRows(tbody, startingDay, monthName) {
+	let monthIndex = monthsNames.indexOf(monthName);
+  let daysInCurrentMonth = daysInMonth[monthIndex];
+  let count = startingDay;
+  
+  while (count + 6 < daysInCurrentMonth) {
+  	let row = document.createElement("tr");
+    for (i = 0; i < 7; i++) {
+      let cell = document.createElement("td");
+      cell.textContent = count;
+      row.appendChild(cell);
+      count++;
+    }
+    tbody.appendChild(row);
   }
-  return startDay;
+  
+  return count;
+}
+
+function createLastRow(startDay, monthName) {
+	let monthIndex = monthsNames.indexOf(monthName);
+  let daysInCurrentMonth = daysInMonth[monthIndex];
+
+  let row = document.createElement("tr");
+  let count = 0;
+  for (i = startDay; i <= daysInCurrentMonth; i++) {
+    let cell = document.createElement("td");
+    cell.textContent = i;
+    row.appendChild(cell);
+    count++;
+  }
+  for (i = count; i < 7; i++) {
+    let cell = document.createElement("td");
+    row.appendChild(cell);
+  }
+  
+  return row;
 }
 
 function previous() {
@@ -102,6 +134,7 @@ function next() {
 }
 
 //*bind execution logic with buttons
+//TODO: make small function so I'll avoid duplications (assign clickHandler, id of the element, reference to the handler)
 let buttonPrev = document.getElementById("previous");
 buttonPrev.addEventListener("click", previous);
 
@@ -110,3 +143,4 @@ buttonNext.addEventListener("click", next);
 
 let showButton = document.getElementById("show");
 showButton.addEventListener("click", showCalendar);
+
