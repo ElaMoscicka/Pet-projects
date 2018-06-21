@@ -54,7 +54,7 @@ function createDaysForMonth(monthName, startingDay) {
 
   let firstRow = createFirstRow(startingDay);
   tbody.appendChild(firstRow);
-  
+
   let index = daysNames.indexOf(startingDay);
   let nextMonday = 8 - index; // 7 - index + 1
 
@@ -63,18 +63,18 @@ function createDaysForMonth(monthName, startingDay) {
   let lastRow = createLastRow(lastMonday, monthName);
   tbody.appendChild(lastRow);
 
-	return tbody;
+  return tbody;
 }
 
 function createFirstRow(startingDay) {
   let row = document.createElement("tr");
   let start = daysNames.indexOf(startingDay);
-  
+
   for (i = 0; i < start; i++) {
     let cell = document.createElement("td");
     row.appendChild(cell);
   }
-  
+
   let count = 1;
   for (i = start; i < 7; i++) {
     let cell = document.createElement("td");
@@ -82,17 +82,17 @@ function createFirstRow(startingDay) {
     row.appendChild(cell);
     count++;
   }
-  
+
   return row;
 }
 
 function createMiddleRows(tbody, startingDay, monthName) {
-	let monthIndex = monthsNames.indexOf(monthName);
+  let monthIndex = monthsNames.indexOf(monthName);
   let daysInCurrentMonth = daysInMonth[monthIndex];
   let count = startingDay;
-  
+
   while (count + 6 < daysInCurrentMonth) {
-  	let row = document.createElement("tr");
+    let row = document.createElement("tr");
     for (i = 0; i < 7; i++) {
       let cell = document.createElement("td");
       cell.textContent = count;
@@ -101,12 +101,12 @@ function createMiddleRows(tbody, startingDay, monthName) {
     }
     tbody.appendChild(row);
   }
-  
+
   return count;
 }
 
 function createLastRow(startDay, monthName) {
-	let monthIndex = monthsNames.indexOf(monthName);
+  let monthIndex = monthsNames.indexOf(monthName);
   let daysInCurrentMonth = daysInMonth[monthIndex];
 
   let row = document.createElement("tr");
@@ -121,7 +121,6 @@ function createLastRow(startDay, monthName) {
     let cell = document.createElement("td");
     row.appendChild(cell);
   }
-  
   return row;
 }
 
