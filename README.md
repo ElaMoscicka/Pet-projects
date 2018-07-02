@@ -7,7 +7,7 @@ Project I did:
 -FooBar.
 
 Projects based on tutorials:
--JavaScript Tic Tac Toe Project - Unbeatable AI with Minimax Algorithm,
+-JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),
 -Address Book,
 -Bubble Sort,
 -JavaScript Tic Tac Toe Project,
