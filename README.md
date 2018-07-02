@@ -9,6 +9,5 @@ Project I did:
 Projects based on tutorials:
 -JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),
 -Address Book,
--Bubble Sort,
 -JavaScript Tic Tac Toe Project,
 -Todo list app.
