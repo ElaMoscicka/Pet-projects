@@ -32,7 +32,12 @@ function showCalendar() {
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
-  let days = createDaysForMonth(monthsNames[0], daysNames[6]);
+  let today = new Date();
+  let currentDay = today.getDate();
+  let currentMonth = today.getMonth(); // adding 1 cause months starts from 0 // getMonthName();
+  let startDay = (new Date(today.getFullYear(), today.getMonth(), 1).getDay()+6) % 7; //first day in current month
+
+  let days = createDaysForMonth(monthsNames[currentMonth], daysNames[startDay], currentDay);
   calendar.appendChild(days);
 
   content.appendChild(calendar);
@@ -48,25 +53,25 @@ function createHeader() {
   return thead;
 }
 
-function createDaysForMonth(monthName, startingDay) {
+function createDaysForMonth(monthName, startingDay, currentDay) {
   let tbody = document.createElement("tbody");
   let count = 1;
-
-  let firstRow = createFirstRow(startingDay);
+ 
+  let firstRow = createFirstRow(startingDay, currentDay);
   tbody.appendChild(firstRow);
 
   let index = daysNames.indexOf(startingDay);
   let nextMonday = 8 - index; // 7 - index + 1
 
-  let lastMonday = createMiddleRows(tbody, nextMonday, monthName);
+  let lastMonday = createMiddleRows(tbody, nextMonday, monthName, currentDay);
 
-  let lastRow = createLastRow(lastMonday, monthName);
+  let lastRow = createLastRow(lastMonday, monthName, currentDay);
   tbody.appendChild(lastRow);
 
   return tbody;
 }
 
-function createFirstRow(startingDay) {
+function createFirstRow(startingDay, currentDay) {
   let row = document.createElement("tr");
   let start = daysNames.indexOf(startingDay);
 
@@ -80,13 +85,16 @@ function createFirstRow(startingDay) {
     let cell = document.createElement("td");
     cell.textContent = count;
     row.appendChild(cell);
+    if (count === currentDay) {
+      cell.classList.add("currentDay");
+    }
     count++;
   }
 
   return row;
 }
 
-function createMiddleRows(tbody, startingDay, monthName) {
+function createMiddleRows(tbody, startingDay, monthName, currentDay) {
   let monthIndex = monthsNames.indexOf(monthName);
   let daysInCurrentMonth = daysInMonth[monthIndex];
   let count = startingDay;
@@ -97,6 +105,9 @@ function createMiddleRows(tbody, startingDay, monthName) {
       let cell = document.createElement("td");
       cell.textContent = count;
       row.appendChild(cell);
+      if (count === currentDay) {
+        cell.classList.add("currentDay");
+      }
       count++;
     }
     tbody.appendChild(row);
@@ -105,7 +116,7 @@ function createMiddleRows(tbody, startingDay, monthName) {
   return count;
 }
 
-function createLastRow(startDay, monthName) {
+function createLastRow(startDay, monthName, currentDay) {
   let monthIndex = monthsNames.indexOf(monthName);
   let daysInCurrentMonth = daysInMonth[monthIndex];
 
@@ -115,6 +126,9 @@ function createLastRow(startDay, monthName) {
     let cell = document.createElement("td");
     cell.textContent = i;
     row.appendChild(cell);
+    if (count === currentDay) {
+      cell.classList.add("currentDay");
+    }
     count++;
   }
   for (i = count; i < 7; i++) {
@@ -142,4 +156,3 @@ buttonNext.addEventListener("click", next);
 
 let showButton = document.getElementById("show");
 showButton.addEventListener("click", showCalendar);
-
