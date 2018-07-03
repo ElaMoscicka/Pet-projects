@@ -31,3 +31,7 @@ th {
 td {
   border: 2px solid black;
 }
+
+.currentDay {
+  background-color: red;
+}
