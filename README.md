@@ -2,8 +2,8 @@
 My Pet projects.  
 
 Project I did:  
--Bubble Sort,   	
-  -CSS Calendar (currently working on),  
+-Bubble Sort,  
+-CSS Calendar (currently working on),  
 -FooBar.  
 
 Projects based on tutorials:  
