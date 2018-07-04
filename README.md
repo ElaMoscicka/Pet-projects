@@ -2,7 +2,7 @@
 My Pet projects.  
 
 Project I did:  
--Bubble Sort,  	
+-Bubble Sort,   	
 -CSS Calendar (currently working on),  
 -FooBar.  
 
