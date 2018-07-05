@@ -29,13 +29,24 @@ function showCalendar() {
 
   let content = document.getElementById("content");
 
+  //*new code
+  let calendarInfo = document.createElement("info");
+  content.appendChild(calendarInfo);
+  //*end of new code
+
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
   let today = new Date();
   let currentDay = today.getDate();
-  let currentMonth = today.getMonth(); // adding 1 cause months starts from 0 // getMonthName();
+  let currentMonth = today.getMonth()+1; //added +1 
+  let currentYear = today.getFullYear();
   let startDay = (new Date(today.getFullYear(), today.getMonth(), 1).getDay()+6) % 7; //first day in current month
+  
+  //*new code
+  let info = createInfo(currentMonth, currentYear);
+  content.appendChild(info);
+  //*end of new code
 
   let days = createDaysForMonth(monthsNames[currentMonth], daysNames[startDay], currentDay);
   calendar.appendChild(days);
@@ -52,6 +63,17 @@ function createHeader() {
   });
   return thead;
 }
+
+//*new code
+function createInfo(currentMonth, currentYear) {
+  const tr = document.createElement("tr");
+  const td = document.createElement("td");
+  td.setAttribute('colspan', 7);
+  td.textContent = currentMonth +' - ' + currentYear;
+  tr.appendChild(td);
+  return tr;
+}
+//*end of new code
 
 function createDaysForMonth(monthName, startingDay, currentDay) {
   let tbody = document.createElement("tbody");
@@ -156,3 +178,4 @@ buttonNext.addEventListener("click", next);
 
 let showButton = document.getElementById("show");
 showButton.addEventListener("click", showCalendar);
+
