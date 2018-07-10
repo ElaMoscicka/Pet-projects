@@ -23,30 +23,23 @@ let daysNames = [
   "Sunday"
 ];
 
-function showCalendar() {
+let today = new Date();
+let g_currentDay = today.getDate();
+let g_currentMonth = today.getMonth();
+let g_currentYear = today.getFullYear();
+let g_startDay = (new Date(today.getFullYear(), today.getMonth(), 1).getDay() + 6) % 7; //first day in current month
+
+function showCalendar(currentMonth, currentYear, startDay, currentDay) {
   let calendar = document.createElement("table");
   calendar.classList.add("calendar");
 
   let content = document.getElementById("content");
 
-  //*new code
-  let calendarInfo = document.createElement("info");
-  content.appendChild(calendarInfo);
-  //*end of new code
-
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
-  let today = new Date();
-  let currentDay = today.getDate();
-  let currentMonth = today.getMonth()+1; //added +1 
-  let currentYear = today.getFullYear();
-  let startDay = (new Date(today.getFullYear(), today.getMonth(), 1).getDay()+6) % 7; //first day in current month
-  
-  //*new code
   let info = createInfo(currentMonth, currentYear);
   content.appendChild(info);
-  //*end of new code
 
   let days = createDaysForMonth(monthsNames[currentMonth], daysNames[startDay], currentDay);
   calendar.appendChild(days);
@@ -64,21 +57,17 @@ function createHeader() {
   return thead;
 }
 
-//*new code
 function createInfo(currentMonth, currentYear) {
-  const tr = document.createElement("tr");
-  const td = document.createElement("td");
-  td.setAttribute('colspan', 7);
-  td.textContent = currentMonth +' - ' + currentYear;
-  tr.appendChild(td);
-  return tr;
+  const result = document.createElement("div");
+  result.textContent = (currentMonth + 1) + ' - ' + currentYear;
+  result.classList.add("resultMonthAndYear");
+  return result;
 }
-//*end of new code
 
 function createDaysForMonth(monthName, startingDay, currentDay) {
   let tbody = document.createElement("tbody");
   let count = 1;
- 
+
   let firstRow = createFirstRow(startingDay, currentDay);
   tbody.appendChild(firstRow);
 
@@ -112,7 +101,6 @@ function createFirstRow(startingDay, currentDay) {
     }
     count++;
   }
-
   return row;
 }
 
@@ -134,7 +122,6 @@ function createMiddleRows(tbody, startingDay, monthName, currentDay) {
     }
     tbody.appendChild(row);
   }
-
   return count;
 }
 
@@ -168,14 +155,10 @@ function next() {
   console.log("next");
 }
 
-//*bind execution logic with buttons
-//TODO: make small function so I'll avoid duplications (assign clickHandler, id of the element, reference to the handler)
 let buttonPrev = document.getElementById("previous");
 buttonPrev.addEventListener("click", previous);
 
 let buttonNext = document.getElementById("next");
 buttonNext.addEventListener("click", next);
 
-let showButton = document.getElementById("show");
-showButton.addEventListener("click", showCalendar);
-
+showCalendar(g_currentMonth, g_currentYear, g_startDay, g_currentDay); //calling the function
