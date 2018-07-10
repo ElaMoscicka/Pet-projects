@@ -1,5 +1,4 @@
-.header {
-  font-size: 15px;
+h1 {
   color: red;
 }
 
@@ -30,8 +29,16 @@ th {
 
 td {
   border: 2px solid black;
+  text-align: center;
+  padding: 24px;
+  width: 25px;
 }
 
 .currentDay {
   background-color: red;
+}
+
+.resultMonthAndYear {
+  /* style it*/
+  background: yellow;
 }
