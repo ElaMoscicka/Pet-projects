@@ -2,9 +2,9 @@
 My Pet projects.  
 
 Project I did:  
--Bubble Sort,  
+-Bubble Sort (finished),  
 -CSS Calendar (currently working on),  
--FooBar.  
+-FooBar (finished).  
 
 Projects based on tutorials:  
 -JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),  
