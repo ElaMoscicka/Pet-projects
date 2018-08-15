@@ -35,6 +35,8 @@ function showCalendar(currentMonth, currentYear, startDay, currentDay) {
 
   let content = document.getElementById("content");
 
+  clearCalendarView(content);
+
   let calendarHeader = createHeader();
   calendar.appendChild(calendarHeader);
 
@@ -45,6 +47,11 @@ function showCalendar(currentMonth, currentYear, startDay, currentDay) {
   calendar.appendChild(days);
 
   content.appendChild(calendar);
+}
+
+function clearCalendarView(content) {
+ //todo: search for calendar and info on content and if exist, remove it from content 
+ //make changes only here! :)
 }
 
 function createHeader() {
@@ -59,7 +66,7 @@ function createHeader() {
 
 function createInfo(currentMonth, currentYear) {
   const result = document.createElement("div");
-  result.textContent = (currentMonth + 1) + ' - ' + currentYear;
+  result.textContent = (monthsNames[currentMonth]) + '  ' + currentYear;
   result.classList.add("resultMonthAndYear");
   return result;
 }
@@ -148,13 +155,27 @@ function createLastRow(startDay, monthName, currentDay) {
 }
 
 function previous() {
-  console.log("previous");
+  g_currentMonth--;
+  if (g_currentMonth < 0) {
+    g_currentMonth = 11;
+    g_currentYear--;
+  }
+  g_startDay = (new Date(g_currentYear, g_currentMonth, 1).getDay() + 6) % 7;;
+  showCalendar(g_currentMonth, g_currentYear, g_startDay);
 }
 
 function next() {
-  console.log("next");
+  g_currentMonth++;
+  if (g_currentMonth > 11) {
+    g_currentMonth = 0;
+    g_currentYear++;
+  }
+  g_startDay = (new Date(g_currentYear, g_currentMonth, 1).getDay() + 6) % 7;
+  showCalendar(g_currentMonth, g_currentYear, g_startDay);
 }
 
+//*bind execution logic with buttons
+//TODO: make small function so I'll avoid duplications (assign clickHandler, id of the element, reference to the handler)
 let buttonPrev = document.getElementById("previous");
 buttonPrev.addEventListener("click", previous);
 
