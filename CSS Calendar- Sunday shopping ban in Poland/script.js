@@ -50,7 +50,7 @@ function showCalendar(currentMonth, currentYear, startDay, currentDay) {
 }
 
 function clearCalendarView(content) {
- //todo: search for calendar and info on content and if exist, remove it from content 
+ //todo: search for calendar and info on content and if exist, remove it from content (content.ChildNodes, or something else) 
  //make changes only here! :)
 }
 
@@ -172,6 +172,15 @@ function next() {
   }
   g_startDay = (new Date(g_currentYear, g_currentMonth, 1).getDay() + 6) % 7;
   showCalendar(g_currentMonth, g_currentYear, g_startDay);
+
+  /*g_currentMonth++;
+  let nextMonth = (g_currentMonth + 1) % 12;
+  if (nextMonth === 0) {
+    g_currentYear++;
+  };
+  g_startDay;
+  showCalendar(nextMonth, g_currentYear, g_startDay)
+  */
 }
 
 //*bind execution logic with buttons
