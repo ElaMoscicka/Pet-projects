@@ -3,7 +3,7 @@ My Pet projects.
 
 Project I did:  
 -Bubble Sort (finished),  
--CSS Calendar (currently working on),  
+-Calendar (finished),  
 -FooBar (finished).  
 
 Projects based on tutorials:  
