@@ -194,7 +194,6 @@ function next() {
 }
 
 //*bind execution logic with buttons
-//TODO: make small function so I'll avoid duplications (assign clickHandler, id of the element, reference to the handler)
 let buttonPrev = document.getElementById("previous");
 buttonPrev.addEventListener("click", previous);
 
