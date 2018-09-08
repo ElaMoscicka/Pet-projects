@@ -24,6 +24,7 @@ table {
   text-align: center;
   font-size: 16px;
 }
+
 .button-style:hover {
   background-color: #26c6da;
   color: white;
@@ -33,6 +34,7 @@ table {
   float: left;
   padding-top: 10px;
 }
+
 #next {
   float: right;
   padding-top: 10px;
