@@ -11,6 +11,6 @@ Projects based on tutorials:
 -Address Book,  
 -Build A Travel Agency Theme With Materialize CSS 1.0.0,  
 -JavaScript Tic Tac Toe Project,  
--Todo list app,
+-Todo list app,  
 -Quazzu
 
