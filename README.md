@@ -4,7 +4,8 @@ My Pet projects.
 Project I did:  
 -Bubble Sort (finished),  
 -Calendar (finished),  
--FooBar (finished).  
+-FooBar (finished),  
+-API Project (in progress).  
 
 Projects based on tutorials:  
 -JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),  
