@@ -14,5 +14,6 @@ Projects based on tutorials:
 -JavaScript Tic Tac Toe Project,  
 -Todo list app,  
 -Quazzu,  
--Madmin
+-Madmin,  
+-BizLand
 
