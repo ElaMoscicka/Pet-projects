@@ -15,5 +15,6 @@ Projects based on tutorials:
 -Todo list app,  
 -Quazzu,  
 -Madmin,  
--BizLand
+-BizLand,  
+-Galappear
 
