@@ -1,0 +1,67 @@
+.btn {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 142, 110);
+}
+
+.form-group {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 800;
+    color: #231d51;
+}
+
+.bordershowResults {
+    background-color: #fff;
+    padding: 2px;
+    border: 1px solid #ddd;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.borderShowNoResults,
+.bordershowMissingAddress {
+    margin-top: 40px;
+    border: 1px solid red;
+}
+
+.textshowNoResults,
+.textshowMissingAddress {
+    text-align: center;
+    color: red;
+}
+
+.imageStyle {
+    width: 100%; 
+    max-width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.vendorsName {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 800;
+    color: #231d51;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.categoryName {
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(73, 70, 70);
+    /* color: #888; */
+    /* font-weight: 600; */
+}
+
+.flex1 {
+    background-color: lightcoral;
+    width: 30%;
+}
+
+.flex2 {
+    background-color: #f7f7f7;
+    flex: 1;
+}
