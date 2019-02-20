@@ -16,5 +16,8 @@ Projects based on tutorials:
 -Quazzu,  
 -Madmin,  
 -BizLand,  
--Galappear
+-Galappear  
+
+Projects based on tutorials + my additional implementations:
+
 
