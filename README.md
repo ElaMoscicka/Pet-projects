@@ -19,5 +19,7 @@ Projects based on tutorials:
 -Galappear  
 
 Projects based on tutorials + my additional implementations:
-
+- Chuck Norris Joke Generator (improved UI part),  
+- Loan Calculator (added "Clear numbers" part),  
+- Task List (added Toasts to: "Add task", "Clear All Tasks", "Remove Task" functions)
 
