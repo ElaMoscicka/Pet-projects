@@ -1,0 +1,13 @@
+.col-form-label {
+  color: #343a40!important;
+}
+
+ul.list-group-striped li:nth-of-type(odd){
+  background-color: #f8f9fa!important;
+  color: #343a40!important;
+}
+
+ul.list-group-striped li:nth-of-type(even){
+  background-color: #17a2b8!important;
+  color: #fff!important;
+}
