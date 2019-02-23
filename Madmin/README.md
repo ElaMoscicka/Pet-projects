@@ -1,4 +1,4 @@
-Madmin - Interactive & responsive admin theme built using Materialize CSS with: 
+Madmin - Interactive & responsive admin theme built using Materialize CSS with:   
 -Working todo list,   
 -charts,   
 -preloader,   
