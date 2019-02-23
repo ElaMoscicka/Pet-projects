@@ -6,3 +6,8 @@ Responsive Cloud hosting theme built using Materialize CSS with:
 * Login Modal,  
 
 ![Screenshot](Quazzu.PNG)
+
+
+
+Mobile version:
+![Screenshot](QuazzuMobile.PNG)
