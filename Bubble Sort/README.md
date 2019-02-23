@@ -3,3 +3,5 @@ compares each pair of adjacent items and swaps them if they are in the wrong ord
 The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted.
 
 Codepen: https://codepen.io/ElaMoscicka/pen/VMxoRx
+
+![Screenshot](BubbleSort.PNG)
