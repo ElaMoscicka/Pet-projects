@@ -9,4 +9,4 @@ BizLand - Business consultation theme built using Materialize CSS with:
 
 
 Mobile version:  
-![Screenshot](BizLandMobile.PNG)
+![Screenshot](BizlandMobile.PNG)
