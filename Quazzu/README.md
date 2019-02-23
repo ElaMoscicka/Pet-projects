@@ -9,5 +9,6 @@ Responsive Cloud hosting theme built using Materialize CSS with:
 
 
 
-Mobile version:
+  
+Mobile version:  
 ![Screenshot](QuazzuMobile.PNG)
