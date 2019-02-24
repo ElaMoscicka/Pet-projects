@@ -1,11 +1,11 @@
 
 My Pet projects.  
 
-Project I did:  
+Projects I did:  
 - Bubble Sort (finished),  
 - Calendar (finished),  
 - FooBar (finished),  
-- API Project (in progress).  
+- API Project (JavaScript version is finished, I plan to rewrite it in React once I finish learning it).  
 
 Projects based on tutorials:  
 - JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),  
