@@ -31,3 +31,11 @@
 .summer {
   background-color: orange;
 }
+
+.error {
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
