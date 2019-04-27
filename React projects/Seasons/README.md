@@ -2,7 +2,7 @@ Using:
 * Mozilla Developer’s Network (MDN) Geolocation API
 * Semantic UI 
 
-
+  
 Prompts user for their location:
 * show loading spinner while awaiting user decision
 ![Screenshot](spinner.PNG)
