@@ -1,4 +1,4 @@
-Songs project using:
+Pictures project using:
 * Unsplash API
 * Semantic UI 
 * Axios
