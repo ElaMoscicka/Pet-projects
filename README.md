@@ -6,7 +6,7 @@ Projects I did:
 - Calendar (finished),  
 - FooBar (finished),  
 - API Project (finished),  
-- Headhunter Quiz  
+- Headhunter Quiz (finished)  
 
 Projects based on tutorials:  
 - JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),  
@@ -23,4 +23,3 @@ Projects based on tutorials + my additional implementations:
 - Chuck Norris Joke Generator (improved UI part),  
 - Loan Calculator (added "Clear numbers" part),  
 - Task List (added Toasts to: "Add task", "Clear All Tasks", "Remove Task" functions)
-
