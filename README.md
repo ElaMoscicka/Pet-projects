@@ -5,7 +5,8 @@ Projects I did:
 - Bubble Sort (finished),  
 - Calendar (finished),  
 - FooBar (finished),  
-- API Project (JavaScript version is finished, I plan to rewrite it in React once I finish learning it).  
+- API Project (finished),  
+- Headhunter Quiz  
 
 Projects based on tutorials:  
 - JavaScript Tic Tac Toe Project (Unbeatable AI with Minimax Algorithm),  
