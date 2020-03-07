@@ -110,7 +110,7 @@ function checkTie() {
 function minimax(newBoard, player) {
     var availSpots = emptySquares(newBoard); //defining the indexes of the available spots in the board
 
-    if(checkWin(newBoard, player)) { //checking who wins
+    if(checkWin(newBoard, humanPlayer)) { //checking who wins
         return {score: -10}; //if O wins we return -10
     } else if (checkWin(newBoard, aiPlayer)) {
         return {score: 10} // if X wins we return 10
